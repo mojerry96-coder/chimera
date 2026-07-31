@@ -64,6 +64,10 @@ film. See `ASSET_QA.md` section 5.1.
 autoplay, `MediaSequence` falls back to the *last* cue's plate — the "final held image" the placement
 manifest specifies — not the plate of whichever cue it stopped on.
 
+**The debrief is the only page that scrolls**, so it uses `ScrollStage` rather than `FixedStage` —
+same width and scale behaviour, but the stage may exceed 1080 and the plate stays fixed behind the
+scrolling record.
+
 **The brand mark is a placeholder.** The mockups show four different marks across the twenty pages
 (lion, gryphon, hexagon, compass) and neither document specifies one. `ProjectChimeraMark` is a
 neutral stand-in; swapping it changes nothing else.
@@ -74,12 +78,12 @@ neutral stand-in; swapping it changes nothing else.
 |---|---|
 | Media | complete — 13 clips, 17 plates, 17 segment frames |
 | Voiceover | complete — 26 lines, −16 LUFS, transcripts included |
-| Routes | all 20 exist and are walkable |
-| Page 01 | built |
-| Pages 02–20 | scaffolded |
+| Routes | all 20 built |
+| Pages | all 20 built |
 
-Five pages are additionally blocked on a decision, flagged in-app on the stub and listed in
-`ASSET_QA.md` section 7.
+Every mockup/master conflict was resolved in the master's favour, per its section 21. The five that
+mattered are recorded in `ASSET_QA.md` section 4 and commented at the top of the page that resolves
+each one.
 
 ## Known advisory
 

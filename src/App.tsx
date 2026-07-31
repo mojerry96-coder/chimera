@@ -1,7 +1,4 @@
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
-import { Stub } from "./pages/Stub";
-import { PLATE } from "./media/assets";
-
 import Intro01 from "./pages/Intro01";
 import Intro02 from "./pages/Intro02";
 import Intro03 from "./pages/Intro03";
@@ -17,12 +14,16 @@ import PreFinal from "./pages/PreFinal";
 import Outcome from "./pages/Outcome";
 import FailureTime from "./pages/FailureTime";
 import FailureConfidence from "./pages/FailureConfidence";
+import T3Workflow from "./pages/T3Workflow";
+import Final from "./pages/Final";
+import Debrief from "./pages/Debrief";
+import FailureReadiness from "./pages/FailureReadiness";
+import FailureCrisis from "./pages/FailureCrisis";
 
 /**
  * Master prompt section 9 — all 20 routes.
  *
- * Fifteen are built. The remaining five are stubs blocked on a decision, not
- * on work; each states its blocker on screen and in ASSET_QA.md section 7.
+ * All twenty are built.
  *
  * Where a mockup contradicts the master document the master wins (section 21),
  * most visibly on pages 19 and 20 whose mockups show a rocket mission-control
@@ -51,70 +52,20 @@ export default function App() {
         <Route path="/t2-crisis" element={<T2Crisis />} />
 
         {/* Act IV — process under pressure */}
-        <Route
-          path="/t3"
-          element={
-            <Stub
-              route="t3"
-              title="UAT SIGN-OFF WORKFLOW"
-              plate={PLATE.P12_UAT}
-              blockedOn="mockup names the steps Compliance Lead / Product Owner / Security Lead / QA-UAT Lead / Business Sponsor, but the master locks C=UAT Test Completion, A=Defect Resolution, D=QA Sign-Off, B=Pilot University Sign-Off, E=CTO Final Approval"
-            />
-          }
-        />
+        <Route path="/t3" element={<T3Workflow />} />
         <Route path="/t3-resolve" element={<T3Resolve />} />
 
         {/* Act V — own the recommendation */}
         <Route path="/pre-final" element={<PreFinal />} />
-        <Route
-          path="/final"
-          element={
-            <Stub
-              route="final"
-              title="FINAL RECOMMENDATION"
-              plate={PLATE.P08_EXEC}
-              blockedOn="option labels — master says Full / Phased / Delay, mockup says Go Live / Delay / Partial"
-            />
-          }
-        />
+        <Route path="/final" element={<Final />} />
         <Route path="/outcome" element={<Outcome />} />
-        <Route
-          path="/debrief"
-          element={
-            <Stub
-              route="debrief"
-              title="DECISION RECORD"
-              plate={PLATE.P15_EMPTY_DAY}
-              blockedOn="scope — mockup is a compact 5-row card, master requires a 5-section scrolling debrief with 6 metrics, 7 accordion rows and 8 reflection questions"
-            />
-          }
-        />
+        <Route path="/debrief" element={<Debrief />} />
 
         {/* Failure endings. Daylight and restrained, per section 1.6. */}
         <Route path="/failure-time" element={<FailureTime />} />
         <Route path="/failure-confidence" element={<FailureConfidence />} />
-        <Route
-          path="/failure-readiness"
-          element={
-            <Stub
-              route="failure-readiness"
-              title="LAUNCH READINESS CRITICAL"
-              plate={PLATE.P06_RED_BOARD}
-              blockedOn="mockup shows a rocket mission-control room with a launch pad; master requires the red board and forbids a science-fiction command centre"
-            />
-          }
-        />
-        <Route
-          path="/failure-crisis"
-          element={
-            <Stub
-              route="failure-crisis"
-              title="CRISIS MISMANAGED"
-              plate={PLATE.P15_EMPTY_DAY}
-              blockedOn="mockup shows a breaking-news broadcast; master states no breaking-news spectacle is required"
-            />
-          }
-        />
+        <Route path="/failure-readiness" element={<FailureReadiness />} />
+        <Route path="/failure-crisis" element={<FailureCrisis />} />
 
         <Route path="*" element={<Navigate to="/intro-01" replace />} />
       </Routes>

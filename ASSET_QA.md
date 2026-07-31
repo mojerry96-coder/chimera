@@ -1,7 +1,7 @@
 # Project Chimera — Asset QA Report
 
 Date: 2026-07-31
-Scope: media only. No application code exists yet.
+Scope: the media and voiceover layers, and the conflicts the app had to resolve to use them.
 
 ---
 
@@ -13,9 +13,11 @@ Scope: media only. No application code exists yet.
 |---|---:|---|
 | Video, 1920×1080 H.264 faststart | 13 | delivered |
 | Plates, 1920×1080 PNG | 17 | delivered |
-| Segment fallback frames | 12 | delivered |
+| Segment fallback frames | 17 | delivered |
 | Page reference mockups `P01–P20` | 20 | delivered, renamed |
-| Audio (VO, ambience, SFX, captions) | 0 | **not started** |
+| Voiceover lines | 26 | delivered |
+| Transcripts | 26 | delivered |
+| Ambience, SFX, captions | 0 | deferred by request |
 
 Source clips were 1276×720; Kling generations are 1280×720. All are lanczos-upscaled to the
 1920×1080 stage. Delivered plates P01–P08 are pixel-exact freeze frames of their own clips, so the
@@ -198,11 +200,21 @@ an error introduced here.
 
 ---
 
-## 7. Outstanding before the build can run
+## 7. Outstanding
 
-1. **Audition the four voices** and confirm or swap (§5).
-2. **Decide the P02 / P03 / P10 timing overlaps** (§5.1).
-3. **Re-time the segment map** against the delivered segment frames (§2.1).
-4. **Decide the six mockup conflicts** in §4.
-5. Remaining audio: 5 ambience beds, 9 SFX, 20 VTT caption files — deferred by request.
-6. Optional: `P19_Five_systems_daylight_office_safe_left.png` if the Page 02 left panel covers a face.
+All twenty pages are built. The mockup conflicts in §4 were all resolved in the master prompt's
+favour under its section 21, and each resolution is commented at the top of the page that makes it.
+The VO overruns in §5.1 were resolved by revealing UI on the published schedule and letting the
+voiceover finish underneath, as section 17 allows.
+
+Still open:
+
+1. **Audition the four voices** and confirm or swap (§5). A swap regenerates into identical
+   filenames, so nothing downstream changes.
+2. **Re-time the segment map** against the delivered segment frames (§2.1). The A/B/C/D emotional
+   convention still does not describe the footage; pages currently use the segments that read
+   correctly rather than the ones the table names.
+3. **Pick the brand mark.** Four different marks appear across the mockups; `ProjectChimeraMark` is
+   a neutral placeholder.
+4. Remaining audio: 5 ambience beds, 9 SFX, 20 VTT caption files — deferred by request.
+5. Optional: `P19_Five_systems_daylight_office_safe_left.png` if the Page 02 left panel covers a face.

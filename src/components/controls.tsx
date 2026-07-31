@@ -39,7 +39,7 @@ export function TextAction({
   return (
     <button
       {...props}
-      className={`inline-flex h-[64px] items-center gap-12 font-manrope text-[13px] font-semibold uppercase tracking-[0.12em] text-[var(--accent)] transition-colors duration-150 hover:text-[var(--accent-light)] ${className}`}
+      className={`inline-flex h-[64px] items-center gap-12 font-manrope text-[13px] font-semibold uppercase tracking-[0.12em] text-[var(--accent)] transition-colors duration-150 hover:text-[var(--accent-light)] disabled:cursor-not-allowed disabled:text-[var(--text-faint)] disabled:hover:text-[var(--text-faint)] ${className}`}
     >
       {children}
     </button>
