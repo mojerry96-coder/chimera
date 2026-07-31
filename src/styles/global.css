@@ -1,0 +1,209 @@
+@import "tailwindcss";
+
+/* ---------------------------------------------------------------------------
+   Spacing scale.
+
+   The master prompt's JSX blueprints mix bracketed pixels with bare numbers:
+   `h-[64px]` next to `gap-16`, `px-28`, `mt-6`, `py-12`. Under Tailwind's
+   default scale `gap-16` is 64px and `mt-6` is 24px, which would blow apart
+   the brand lockup (a 42px mark plus a 64px gap inside a 390x54 box) and put
+   24px between an 18px title and its 9px subtitle inside a 54px-tall box.
+
+   The blueprints clearly mean raw pixels, so the scale is set 1:1 with px.
+   `gap-16` is 16px, `px-28` is 28px, `mt-6` is 6px — every blueprint in the
+   master prompt is then correct exactly as written.
+--------------------------------------------------------------------------- */
+@theme {
+  --spacing: 1px;
+
+  --color-bg: #171918;
+  --color-bg-deep: #141615;
+  --color-surface: #202221;
+  --color-surface-raised: #2e302e;
+  --color-surface-soft: #36322f;
+
+  --color-paper: #f4f2ec;
+  --color-paper-soft: #ded9d2;
+  --color-text-muted: #b8b2aa;
+  --color-text-faint: #827b74;
+
+  --color-accent: #c39a70;
+  --color-accent-light: #d5b38e;
+  --color-accent-dark: #8c6545;
+
+  --color-success: #78917a;
+  --color-warning: #c39a70;
+  --color-danger: #a76a61;
+
+  --font-afacad: "Afacad", sans-serif;
+  --font-manrope: "Manrope", sans-serif;
+}
+
+/* Master prompt section 2 — exact design tokens, kept as CSS variables so the
+   blueprints' `var(--paper)` form works verbatim alongside Tailwind utilities. */
+:root {
+  --bg: #171918;
+  --bg-deep: #141615;
+  --surface: #202221;
+  --surface-raised: #2e302e;
+  --surface-soft: #36322f;
+
+  --paper: #f4f2ec;
+  --paper-soft: #ded9d2;
+  --text-muted: #b8b2aa;
+  --text-faint: #827b74;
+
+  --accent: #c39a70;
+  --accent-light: #d5b38e;
+  --accent-dark: #8c6545;
+
+  --line: rgba(244, 242, 236, 0.16);
+  --line-strong: rgba(244, 242, 236, 0.32);
+
+  --success: #78917a;
+  --warning: #c39a70;
+  --danger: #a76a61;
+
+  --shadow-panel: 0 28px 80px rgba(0, 0, 0, 0.24);
+
+  --radius-control: 8px;
+  --radius-card: 18px;
+  --radius-major: 26px;
+  --radius-pill: 999px;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+  background: var(--bg);
+  color: var(--paper);
+  font-family: "Manrope", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Master prompt section 3 — typography tokens, verbatim. */
+.display-xl {
+  font-family: "Afacad", sans-serif;
+  font-size: 112px;
+  line-height: 0.84;
+  font-weight: 500;
+  letter-spacing: -0.045em;
+}
+.display-lg {
+  font-family: "Afacad", sans-serif;
+  font-size: 88px;
+  line-height: 0.88;
+  font-weight: 500;
+  letter-spacing: -0.04em;
+}
+.display-md {
+  font-family: "Afacad", sans-serif;
+  font-size: 64px;
+  line-height: 0.92;
+  font-weight: 500;
+  letter-spacing: -0.03em;
+}
+.heading-lg {
+  font-family: "Afacad", sans-serif;
+  font-size: 44px;
+  line-height: 1;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+}
+.heading-md {
+  font-family: "Afacad", sans-serif;
+  font-size: 30px;
+  line-height: 1.1;
+  font-weight: 500;
+}
+.body-lg {
+  font-family: "Manrope", sans-serif;
+  font-size: 18px;
+  line-height: 1.55;
+  font-weight: 400;
+}
+.body {
+  font-family: "Manrope", sans-serif;
+  font-size: 15px;
+  line-height: 1.55;
+  font-weight: 400;
+}
+.label {
+  font-family: "Manrope", sans-serif;
+  font-size: 11px;
+  line-height: 1;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+}
+.button-label {
+  font-family: "Manrope", sans-serif;
+  font-size: 13px;
+  line-height: 1;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+.metric-lg {
+  font-family: "Afacad", sans-serif;
+  font-size: 72px;
+  line-height: 0.9;
+  font-weight: 400;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Master prompt section 6 — no gradient is permitted inside. */
+.flat-panel {
+  border: 1px solid var(--line);
+  border-radius: var(--radius-major);
+  background: rgba(23, 25, 24, 0.94);
+  box-shadow: var(--shadow-panel);
+}
+
+/* Master prompt section 7 — media styling. No gradient scrim; contrast comes
+   from a solid UI panel. */
+.media-fill {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.media-normal {
+  filter: brightness(0.94) contrast(0.98) saturate(0.88);
+}
+.media-under-ui {
+  filter: brightness(0.7) contrast(0.98) saturate(0.82);
+}
+.media-subdued {
+  filter: brightness(0.84) contrast(0.92) saturate(0.7);
+}
+
+/* Master prompt section 10 page 04 — the dot pattern is a repeating texture,
+   not a colour gradient, and is explicitly permitted. */
+.architecture-canvas {
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background-color: #1b1d1c;
+  background-image: radial-gradient(circle, rgba(244, 242, 236, 0.1) 0.8px, transparent 0.9px);
+  background-size: 20px 20px;
+}
+
+/* Section 17 — visible 2px paper focus ring on every control. */
+:where(button, [role="button"], a, input, textarea, select):focus-visible {
+  outline: 2px solid var(--paper);
+  outline-offset: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
