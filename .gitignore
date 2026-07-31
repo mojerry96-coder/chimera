@@ -1,0 +1,15 @@
+# dependencies / build
+node_modules/
+dist/
+*.tsbuildinfo
+
+# generation masters — 208MB of 5504x3072 stills and pre-transcode clips.
+# Kept locally as the archive; the 1920x1080 delivery copies in public/assets are canonical.
+_source/
+
+# original unnamed exports
+pages reference/
+
+# os
+.DS_Store
+*.log

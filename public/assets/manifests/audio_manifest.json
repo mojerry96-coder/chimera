@@ -1,0 +1,389 @@
+{
+  "project": "Project Chimera — voiceover",
+  "generatedAt": "2026-07-31",
+  "engine": "ElevenLabs eleven_multilingual_v2",
+  "delivery": {
+    "format": "WAV, 44.1 kHz, 16-bit, mono",
+    "loudness": "EBU R128 normalised to -16 LUFS integrated, -1.5 dBTP",
+    "basePath": "/assets/audio/vo/",
+    "captionPath": "/assets/audio/captions/  (master prompt §8 location)",
+    "pathNote": "audioFilename values are now full public paths. Read paths from this manifest rather than reconstructing them — the two source documents disagree on VO layout (see namingConflicts)."
+  },
+  "casting": {
+    "note": "Selected from the ElevenLabs library on documented voice metadata against the bible section 3 direction notes. NOT auditioned by ear — confirm before locking.",
+    "adebayo": {
+      "voiceId": "QqgW7xZ3mjIAgZVFMwJz",
+      "voiceName": "Ngozi - Calm & Descriptive",
+      "placeholderReplaced": "CHM-11L-VOICE-ADB-01",
+      "direction": "Nigerian woman late 40s-early 50s, calm, low-mid register, precise consonants, never theatrical",
+      "settings": {
+        "stability": 0.62,
+        "similarity_boost": 0.8,
+        "style": 0,
+        "speed": 0.94
+      },
+      "alternate": "JMbCR4ujfEfGaawA1YtC (Toluwalope - Rich and Confident)"
+    },
+    "chidi": {
+      "voiceId": "2iT8jc2rlyC2xhFQccT8",
+      "voiceName": "TKefuna",
+      "placeholderReplaced": "CHM-11L-VOICE-CHI-01",
+      "direction": "Nigerian man early-mid 30s, professional but conversational, slight tiredness, no panic",
+      "settings": {
+        "stability": 0.5,
+        "similarity_boost": 0.8,
+        "style": 0.1,
+        "speed": 1.0
+      },
+      "alternate": "x86DtpnPPuq2BpEiKPRy (Yomi - Young African Nigerian Yoruba Accent)"
+    },
+    "folake": {
+      "voiceId": "JMwQvjJt08OhYlPBWeyc",
+      "voiceName": "Tolani - Clear, Strong and Direct",
+      "placeholderReplaced": "CHM-11L-VOICE-FOL-01",
+      "direction": "Nigerian woman late 30s-early 40s, firm, measured, exact, slightly faster than Adebayo",
+      "settings": {
+        "stability": 0.6,
+        "similarity_boost": 0.8,
+        "style": 0,
+        "speed": 0.98
+      },
+      "alternate": "b8XX4QShLFkd3yZQlz8T (Ify - Clear, Confident, Expressive)"
+    },
+    "student": {
+      "voiceId": "Kd8dIzBuJvT1diS5oAPR",
+      "voiceName": "Christiania - Gentle African Female - Very Conversational",
+      "placeholderReplaced": "CHM-11L-VOICE-STU-01",
+      "direction": "Nigerian young adult woman, anxious but controlled, phone-compressed, not crying",
+      "settings": {
+        "stability": 0.35,
+        "similarity_boost": 0.8,
+        "style": 0.15,
+        "speed": 1.0
+      },
+      "alternate": "EYQ7WzWOUhRLHwL7i08O (Princess - Calm, Natural and Conversational)"
+    }
+  },
+  "lines": [
+    {
+      "assetId": "CHM-VO-P01-ADB-01",
+      "page": "P01",
+      "speaker": "adebayo",
+      "audioFilename": "/assets/audio/vo/adebayo/CHM_VO_P01_ADB_01.wav",
+      "captionFilename": "/assets/audio/captions/P01.vtt",
+      "transcript": "/assets/transcripts/CHM_TR_P01_ADB_01.txt",
+      "durationSeconds": 3.81,
+      "status": "generated"
+    },
+    {
+      "assetId": "CHM-VO-P01-ADB-02",
+      "page": "P01",
+      "speaker": "adebayo",
+      "audioFilename": "/assets/audio/vo/adebayo/CHM_VO_P01_ADB_02.wav",
+      "captionFilename": "/assets/audio/captions/P01.vtt",
+      "transcript": "/assets/transcripts/CHM_TR_P01_ADB_02.txt",
+      "durationSeconds": 6.5,
+      "status": "generated"
+    },
+    {
+      "assetId": "CHM-VO-P02-ADB-01",
+      "page": "P02",
+      "speaker": "adebayo",
+      "audioFilename": "/assets/audio/vo/adebayo/CHM_VO_P02_ADB_01.wav",
+      "captionFilename": "/assets/audio/captions/P02.vtt",
+      "transcript": "/assets/transcripts/CHM_TR_P02_ADB_01.txt",
+      "durationSeconds": 12.45,
+      "status": "generated"
+    },
+    {
+      "assetId": "CHM-VO-P02-ADB-02",
+      "page": "P02",
+      "speaker": "adebayo",
+      "audioFilename": "/assets/audio/vo/adebayo/CHM_VO_P02_ADB_02.wav",
+      "captionFilename": "/assets/audio/captions/P02.vtt",
+      "transcript": "/assets/transcripts/CHM_TR_P02_ADB_02.txt",
+      "durationSeconds": 2.37,
+      "status": "generated"
+    },
+    {
+      "assetId": "CHM-VO-P03-CHI-01",
+      "page": "P03",
+      "speaker": "chidi",
+      "audioFilename": "/assets/audio/vo/chidi/CHM_VO_P03_CHI_01.wav",
+      "captionFilename": "/assets/audio/captions/P03.vtt",
+      "transcript": "/assets/transcripts/CHM_TR_P03_CHI_01.txt",
+      "durationSeconds": 5.53,
+      "status": "generated"
+    },
+    {
+      "assetId": "CHM-VO-P03-CHI-02",
+      "page": "P03",
+      "speaker": "chidi",
+      "audioFilename": "/assets/audio/vo/chidi/CHM_VO_P03_CHI_02.wav",
+      "captionFilename": "/assets/audio/captions/P03.vtt",
+      "transcript": "/assets/transcripts/CHM_TR_P03_CHI_02.txt",
+      "durationSeconds": 5.94,
+      "status": "generated"
+    },
+    {
+      "assetId": "CHM-VO-P04-CHI-01",
+      "page": "P04",
+      "speaker": "chidi",
+      "audioFilename": "/assets/audio/vo/chidi/CHM_VO_P04_CHI_01.wav",
+      "captionFilename": "/assets/audio/captions/P04.vtt",
+      "transcript": "/assets/transcripts/CHM_TR_P04_CHI_01.txt",
+      "durationSeconds": 4.92,
+      "status": "generated"
+    },
+    {
+      "assetId": "CHM-VO-P05-ADB-01",
+      "page": "P05",
+      "speaker": "adebayo",
+      "audioFilename": "/assets/audio/vo/adebayo/CHM_VO_P05_ADB_01.wav",
+      "captionFilename": "/assets/audio/captions/P05.vtt",
+      "transcript": "/assets/transcripts/CHM_TR_P05_ADB_01.txt",
+      "durationSeconds": 4.41,
+      "status": "generated"
+    },
+    {
+      "assetId": "CHM-VO-P06-ADB-01",
+      "page": "P06",
+      "speaker": "adebayo",
+      "audioFilename": "/assets/audio/vo/adebayo/CHM_VO_P06_ADB_01.wav",
+      "captionFilename": "/assets/audio/captions/P06.vtt",
+      "transcript": "/assets/transcripts/CHM_TR_P06_ADB_01.txt",
+      "durationSeconds": 5.2,
+      "status": "generated"
+    },
+    {
+      "assetId": "CHM-VO-P06-ADB-02",
+      "page": "P06",
+      "speaker": "adebayo",
+      "audioFilename": "/assets/audio/vo/adebayo/CHM_VO_P06_ADB_02.wav",
+      "captionFilename": "/assets/audio/captions/P06.vtt",
+      "transcript": "/assets/transcripts/CHM_TR_P06_ADB_02.txt",
+      "durationSeconds": 2.51,
+      "status": "generated",
+      "note": "Strong-outcome approval line. Softer settings than Adebayo default."
+    },
+    {
+      "assetId": "CHM-VO-P07-CHI-01",
+      "page": "P07",
+      "speaker": "chidi",
+      "audioFilename": "/assets/audio/vo/chidi/CHM_VO_P07_CHI_01.wav",
+      "captionFilename": "/assets/audio/captions/P07.vtt",
+      "transcript": "/assets/transcripts/CHM_TR_P07_CHI_01.txt",
+      "durationSeconds": 6.32,
+      "status": "generated"
+    },
+    {
+      "assetId": "CHM-VO-P07-FOL-01",
+      "page": "P07",
+      "speaker": "folake",
+      "audioFilename": "/assets/audio/vo/folake/CHM_VO_P07_FOL_01.wav",
+      "captionFilename": "/assets/audio/captions/P07.vtt",
+      "transcript": "/assets/transcripts/CHM_TR_P07_FOL_01.txt",
+      "durationSeconds": 3.95,
+      "status": "generated"
+    },
+    {
+      "assetId": "CHM-VO-P08-FOL-01",
+      "page": "P08",
+      "speaker": "folake",
+      "audioFilename": "/assets/audio/vo/folake/CHM_VO_P08_FOL_01.wav",
+      "captionFilename": "/assets/audio/captions/P08.vtt",
+      "transcript": "/assets/transcripts/CHM_TR_P08_FOL_01.txt",
+      "durationSeconds": 4.78,
+      "status": "generated"
+    },
+    {
+      "assetId": "CHM-VO-P09-CHI-01",
+      "page": "P09",
+      "speaker": "chidi",
+      "audioFilename": "/assets/audio/vo/chidi/CHM_VO_P09_CHI_01.wav",
+      "captionFilename": "/assets/audio/captions/P09.vtt",
+      "transcript": "/assets/transcripts/CHM_TR_P09_CHI_01.txt",
+      "durationSeconds": 4.74,
+      "status": "generated"
+    },
+    {
+      "assetId": "CHM-VO-P09-CHI-02",
+      "page": "P09",
+      "speaker": "chidi",
+      "audioFilename": "/assets/audio/vo/chidi/CHM_VO_P09_CHI_02.wav",
+      "captionFilename": "/assets/audio/captions/P09.vtt",
+      "transcript": "/assets/transcripts/CHM_TR_P09_CHI_02.txt",
+      "durationSeconds": 1.72,
+      "status": "generated"
+    },
+    {
+      "assetId": "CHM-VO-P10-STU-01",
+      "page": "P10",
+      "speaker": "student",
+      "audioFilename": "/assets/audio/vo/student/CHM_VO_P10_STU_01_phone.wav",
+      "cleanMaster": "/assets/audio/vo/student/CHM_VO_P10_STU_01_clean.wav",
+      "captionFilename": "/assets/audio/captions/P10.vtt",
+      "transcript": "/assets/transcripts/CHM_TR_P10_STU_01.txt",
+      "durationSeconds": 9.6,
+      "status": "generated",
+      "note": "Phone treatment applied: 320-3400 Hz band, 4:1 compression, short room echo. Clean master retained."
+    },
+    {
+      "assetId": "CHM-VO-P10-ADB-01",
+      "page": "P10",
+      "speaker": "adebayo",
+      "audioFilename": "/assets/audio/vo/adebayo/CHM_VO_P10_ADB_01.wav",
+      "captionFilename": "/assets/audio/captions/P10.vtt",
+      "transcript": "/assets/transcripts/CHM_TR_P10_ADB_01.txt",
+      "durationSeconds": 3.34,
+      "status": "generated"
+    },
+    {
+      "assetId": "CHM-VO-P10-FOL-01",
+      "page": "P10",
+      "speaker": "folake",
+      "audioFilename": "/assets/audio/vo/folake/CHM_VO_P10_FOL_01.wav",
+      "captionFilename": "/assets/audio/captions/P10.vtt",
+      "transcript": "/assets/transcripts/CHM_TR_P10_FOL_01.txt",
+      "durationSeconds": 5.48,
+      "status": "generated"
+    },
+    {
+      "assetId": "CHM-VO-P11-FOL-01",
+      "page": "P11",
+      "speaker": "folake",
+      "audioFilename": "/assets/audio/vo/folake/CHM_VO_P11_FOL_01.wav",
+      "captionFilename": "/assets/audio/captions/P11.vtt",
+      "transcript": "/assets/transcripts/CHM_TR_P11_FOL_01.txt",
+      "durationSeconds": 3.67,
+      "status": "generated"
+    },
+    {
+      "assetId": "CHM-VO-P12-FOL-01",
+      "page": "P12",
+      "speaker": "folake",
+      "audioFilename": "/assets/audio/vo/folake/CHM_VO_P12_FOL_01.wav",
+      "captionFilename": "/assets/audio/captions/P12.vtt",
+      "transcript": "/assets/transcripts/CHM_TR_P12_FOL_01.txt",
+      "durationSeconds": 6.73,
+      "status": "generated"
+    },
+    {
+      "assetId": "CHM-VO-P13-ADB-01",
+      "page": "P13",
+      "speaker": "adebayo",
+      "audioFilename": "/assets/audio/vo/adebayo/CHM_VO_P13_ADB_01.wav",
+      "captionFilename": "/assets/audio/captions/P13.vtt",
+      "transcript": "/assets/transcripts/CHM_TR_P13_ADB_01.txt",
+      "durationSeconds": 3.99,
+      "status": "generated"
+    },
+    {
+      "assetId": "CHM-VO-P13-ADB-02",
+      "page": "P13",
+      "speaker": "adebayo",
+      "audioFilename": "/assets/audio/vo/adebayo/CHM_VO_P13_ADB_02.wav",
+      "captionFilename": "/assets/audio/captions/P13.vtt",
+      "transcript": "/assets/transcripts/CHM_TR_P13_ADB_02.txt",
+      "durationSeconds": 3.02,
+      "status": "generated"
+    },
+    {
+      "assetId": "CHM-VO-P14-ADB-01",
+      "page": "P14",
+      "speaker": "adebayo",
+      "audioFilename": "/assets/audio/vo/adebayo/CHM_VO_P14_ADB_01.wav",
+      "captionFilename": "/assets/audio/captions/P14.vtt",
+      "transcript": "/assets/transcripts/CHM_TR_P14_ADB_01.txt",
+      "durationSeconds": 3.25,
+      "status": "generated"
+    },
+    {
+      "assetId": "CHM-VO-P16-ADB-EX",
+      "page": "P16",
+      "speaker": "adebayo",
+      "band": "excellent/good",
+      "audioFilename": "/assets/audio/vo/adebayo/CHM_VO_P16_ADB_EX.wav",
+      "captionFilename": "/assets/audio/captions/P16.vtt",
+      "transcript": "/assets/transcripts/CHM_TR_P16_ADB_EX.txt",
+      "durationSeconds": 5.25,
+      "status": "generated"
+    },
+    {
+      "assetId": "CHM-VO-P16-ADB-DEV",
+      "page": "P16",
+      "speaker": "adebayo",
+      "band": "developing",
+      "audioFilename": "/assets/audio/vo/adebayo/CHM_VO_P16_ADB_DEV.wav",
+      "captionFilename": "/assets/audio/captions/P16.vtt",
+      "transcript": "/assets/transcripts/CHM_TR_P16_ADB_DEV.txt",
+      "durationSeconds": 6.46,
+      "status": "generated"
+    },
+    {
+      "assetId": "CHM-VO-P16-ADB-POOR",
+      "page": "P16",
+      "speaker": "adebayo",
+      "band": "poor",
+      "audioFilename": "/assets/audio/vo/adebayo/CHM_VO_P16_ADB_POOR.wav",
+      "captionFilename": "/assets/audio/captions/P16.vtt",
+      "transcript": "/assets/transcripts/CHM_TR_P16_ADB_POOR.txt",
+      "durationSeconds": 5.57,
+      "status": "generated"
+    }
+  ],
+  "timingConflict": {
+    "summary": "12 of 14 media windows in master prompt section 15 are shorter than the VO they must carry. The timing tables were written without measured audio.",
+    "worst": [
+      {
+        "page": "P02",
+        "voLength": 14.81,
+        "window": 6.2,
+        "overBy": 8.6
+      },
+      {
+        "page": "P03",
+        "voLength": 11.47,
+        "window": 3.7,
+        "overBy": 7.8
+      },
+      {
+        "page": "P10",
+        "voLength": 18.43,
+        "window": 12.7,
+        "overBy": 5.7
+      },
+      {
+        "page": "P13",
+        "voLength": 7.01,
+        "window": 2.8,
+        "overBy": 4.2
+      },
+      {
+        "page": "P09",
+        "voLength": 6.46,
+        "window": 2.2,
+        "overBy": 4.3
+      }
+    ],
+    "recommendedResolution": "Do not re-time the media. Master section 17 states 'Media does not gate interaction' — reveal the UI on the published schedule and let VO continue underneath. Only P02, P03 and P10 are large enough that the overlap may need a per-page decision.",
+    "fitsAsPublished": [
+      "P11",
+      "P14"
+    ]
+  },
+  "notStarted": {
+    "ambience": "5 beds — CHM-AMB-001 through 005",
+    "sfx": "9 cues — CHM-SFX-001 through 009",
+    "captions": "20 VTT files, P01 through P20"
+  },
+  "namingConflicts": {
+    "voLayout": {
+      "bible_s7": "public/assets/audio/vo/<character>/CHM_VO_P01_ADB_01.wav",
+      "master_s8": "public/assets/audio/vo/P01_ADB_01.wav  (flat, no CHM_VO_ prefix)",
+      "chosen": "bible §7 — per-character folders with full asset-ID filenames",
+      "why": "Self-describing and carries the asset ID. The documents conflict with each other; this is not a deviation from a single source of truth.",
+      "action": "Confirm which convention the build should use. Switching is a rename, no regeneration."
+    }
+  }
+}

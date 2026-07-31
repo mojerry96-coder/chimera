@@ -1,0 +1,391 @@
+{
+  "project": "Project Chimera — The Last Test Before Launch",
+  "schema": "CHM-[TYPE]-[STATUS]-[NUMBER]",
+  "stage": {
+    "width": 1920,
+    "height": 1080
+  },
+  "generatedAt": "2026-07-31",
+  "notes": [
+    "Source masters live in /_source and are not shipped. /public/assets holds delivery copies only.",
+    "All delivered video is 1920x1080 H.264 yuv420p, faststart, silent unless stated.",
+    "Source clips were 1276x720 and are upscaled with lanczos to the 1920x1080 stage.",
+    "Plates named P01-P08 are DRV freeze frames taken from the delivered videos, so the video->plate switch in the media engine is pixel-exact."
+  ],
+  "video": [
+    {
+      "assetId": "CHM-VID-EX-001",
+      "key": "V01_ADEBAYO",
+      "file": "V01_Adebayo_performance_arc_10s.mp4",
+      "duration": 10.04,
+      "status": "EX",
+      "audio": false,
+      "usedBy": [
+        "P05",
+        "P06",
+        "P10",
+        "P15"
+      ]
+    },
+    {
+      "assetId": "CHM-VID-EX-002",
+      "key": "V02_CHIDI",
+      "file": "V02_Chidi_performance_arc_10s.mp4",
+      "duration": 10.04,
+      "status": "EX",
+      "audio": false,
+      "usedBy": [
+        "P03",
+        "P07",
+        "P09",
+        "P15"
+      ]
+    },
+    {
+      "assetId": "CHM-VID-EX-003",
+      "key": "V03_FOLAKE",
+      "file": "V03_Folake_performance_arc_10s.mp4",
+      "duration": 10.04,
+      "status": "EX",
+      "audio": false,
+      "usedBy": [
+        "P04",
+        "P10",
+        "P11",
+        "P12"
+      ]
+    },
+    {
+      "assetId": "CHM-VID-EX-004",
+      "key": "V04_DOOR",
+      "file": "V04_POV_door_opening_5s.mp4",
+      "duration": 5.04,
+      "status": "EX",
+      "audio": false,
+      "usedBy": [
+        "P01",
+        "P11",
+        "P14"
+      ]
+    },
+    {
+      "assetId": "CHM-VID-EX-005",
+      "key": "V05_CAST",
+      "file": "V05_ChimeraRoom_cast_reveal_6s.mp4",
+      "duration": 6.04,
+      "status": "EX",
+      "audio": false,
+      "usedBy": [
+        "P01"
+      ]
+    },
+    {
+      "assetId": "CHM-VID-EX-006",
+      "key": "V06_FOLDER",
+      "file": "V06_Folake_places_defect_folder_6s.mp4",
+      "duration": 6.04,
+      "status": "EX",
+      "audio": false,
+      "usedBy": [
+        "P07"
+      ]
+    },
+    {
+      "assetId": "CHM-VID-EX-007",
+      "key": "V07_PHONE",
+      "file": "V07_Phone_vibrates_crisis_5s.mp4",
+      "duration": 5.04,
+      "status": "EX",
+      "audio": false,
+      "usedBy": [
+        "P10"
+      ]
+    },
+    {
+      "assetId": "CHM-VID-EX-008",
+      "key": "V08_EXEC",
+      "file": "V08_Executive_three_shot_8s.mp4",
+      "duration": 8.04,
+      "status": "EX",
+      "audio": false,
+      "usedBy": [
+        "P14",
+        "P15"
+      ]
+    },
+    {
+      "assetId": "CHM-VID-NEW-009",
+      "key": "V09_ABUJA",
+      "file": "V09a_Abuja_establishing_3shot_SOUND_10s.mp4",
+      "duration": 10.04,
+      "status": "NEW",
+      "audio": true,
+      "model": "kling3_0/std",
+      "identityLock": "P09 start_image",
+      "usedBy": [
+        "P01",
+        "P15"
+      ]
+    },
+    {
+      "assetId": "CHM-VID-NEW-010",
+      "key": "V10_PHONE_AFTERMATH",
+      "file": "V10_student_phone_aftermath_5s.mp4",
+      "duration": 5.04,
+      "status": "NEW",
+      "audio": false,
+      "model": "kling3_0/std",
+      "identityLock": "P17 start_image",
+      "usedBy": [
+        "P10"
+      ]
+    },
+    {
+      "assetId": "CHM-VID-NEW-011",
+      "key": "V11_VC_CALL",
+      "file": "V11_Adebayo_VC_call_6s.mp4",
+      "duration": 6,
+      "status": "NEW",
+      "audio": false,
+      "model": "kling3_0/std",
+      "identityLock": "P01 Adebayo start_image",
+      "usedBy": [
+        "P10"
+      ]
+    },
+    {
+      "assetId": "CHM-VID-NEW-012",
+      "key": "V12_BOARD_REACTION",
+      "file": "V12_board_absorbs_recommendation_8s.mp4",
+      "duration": 8,
+      "status": "NEW",
+      "audio": false,
+      "model": "kling3_0/std",
+      "identityLock": "P08 exec room start_image",
+      "usedBy": [
+        "P14",
+        "P15"
+      ]
+    },
+    {
+      "assetId": "CHM-VID-NEW-013",
+      "key": "V13_ADEBAYO_APPROVAL",
+      "file": "V13_Adebayo_approval_5s.mp4",
+      "duration": 5,
+      "status": "NEW",
+      "audio": false,
+      "model": "kling3_0/std",
+      "identityLock": "P01 Adebayo start_image",
+      "usedBy": [
+        "P06",
+        "P15"
+      ],
+      "reason": "V01 contains no usable approval beat; segment C is a downward-gaze reading pose, not approval."
+    }
+  ],
+  "plates": [
+    {
+      "assetId": "CHM-PLT-DRV-001",
+      "key": "P01_ADEBAYO",
+      "file": "P01_Adebayo_project_table_morning.png",
+      "status": "DRV",
+      "derivedFrom": "V01 @ 9.99s",
+      "documentAssetId": "CHM-PLT-EX-001",
+      "idNote": "Bible §4 registers this as an EX (existing) asset, but no such file was ever delivered. Derived here from the matching clip, so the schema-correct status is DRV. Look up by either ID."
+    },
+    {
+      "assetId": "CHM-PLT-DRV-002",
+      "key": "P02_CHIDI",
+      "file": "P02_Chidi_project_table_afternoon.png",
+      "status": "DRV",
+      "derivedFrom": "V02 @ 9.99s",
+      "documentAssetId": "CHM-PLT-EX-002",
+      "idNote": "Bible §4 registers this as an EX (existing) asset, but no such file was ever delivered. Derived here from the matching clip, so the schema-correct status is DRV. Look up by either ID."
+    },
+    {
+      "assetId": "CHM-PLT-DRV-003",
+      "key": "P03_FOLAKE",
+      "file": "P03_Folake_QA_room.png",
+      "status": "DRV",
+      "derivedFrom": "V03 @ 9.99s",
+      "documentAssetId": "CHM-PLT-EX-003",
+      "idNote": "Bible §4 registers this as an EX (existing) asset, but no such file was ever delivered. Derived here from the matching clip, so the schema-correct status is DRV. Look up by either ID."
+    },
+    {
+      "assetId": "CHM-PLT-DRV-004",
+      "key": "P04_DOOR",
+      "file": "P04_POV_glass_door.png",
+      "status": "DRV",
+      "derivedFrom": "V04 @ 4.99s",
+      "documentAssetId": "CHM-PLT-EX-004",
+      "idNote": "Bible §4 registers this as an EX (existing) asset, but no such file was ever delivered. Derived here from the matching clip, so the schema-correct status is DRV. Look up by either ID."
+    },
+    {
+      "assetId": "CHM-PLT-DRV-005",
+      "key": "P05_ROOM",
+      "file": "P05_ChimeraRoom_wide_three_characters.png",
+      "status": "DRV",
+      "derivedFrom": "V05 @ 5.99s",
+      "documentAssetId": "CHM-PLT-EX-005",
+      "idNote": "Bible §4 registers this as an EX (existing) asset, but no such file was ever delivered. Derived here from the matching clip, so the schema-correct status is DRV. Look up by either ID."
+    },
+    {
+      "assetId": "CHM-PLT-DRV-006",
+      "key": "P06_RED_BOARD",
+      "file": "P06_ChimeraRoom_red_board_midday.png",
+      "status": "DRV",
+      "derivedFrom": "V06 @ 5.99s",
+      "documentAssetId": "CHM-PLT-EX-006",
+      "idNote": "Bible §4 registers this as an EX (existing) asset, but no such file was ever delivered. Derived here from the matching clip, so the schema-correct status is DRV. Look up by either ID."
+    },
+    {
+      "assetId": "CHM-PLT-DRV-007",
+      "key": "P07_PHONE",
+      "file": "P07_Phone_insert_dark_screen.png",
+      "status": "DRV",
+      "derivedFrom": "V07 @ 4.99s",
+      "documentAssetId": "CHM-PLT-EX-007",
+      "idNote": "Bible §4 registers this as an EX (existing) asset, but no such file was ever delivered. Derived here from the matching clip, so the schema-correct status is DRV. Look up by either ID."
+    },
+    {
+      "assetId": "CHM-PLT-DRV-008",
+      "key": "P08_EXEC",
+      "file": "P08_Executive_room_three_shot_evening.png",
+      "status": "DRV",
+      "derivedFrom": "V08 @ 7.99s",
+      "documentAssetId": "CHM-PLT-EX-008",
+      "idNote": "Bible §4 registers this as an EX (existing) asset, but no such file was ever delivered. Derived here from the matching clip, so the schema-correct status is DRV. Look up by either ID."
+    },
+    {
+      "assetId": "CHM-PLT-NEW-009",
+      "key": "P09_ABUJA",
+      "file": "P09_Abuja_establishing_morning.png",
+      "status": "NEW",
+      "model": "nano_banana_pro/2k",
+      "role": "start frame + fallback plate for V09"
+    },
+    {
+      "assetId": "CHM-PLT-EX-010",
+      "key": "P10_ARCHITECTURE",
+      "file": "P10_UI_workstation_OTS_architecture_canvas.png",
+      "status": "EX",
+      "safeArea": "monitor screen, centre-right"
+    },
+    {
+      "assetId": "CHM-PLT-EX-011",
+      "key": "P11_ALLOCATION",
+      "file": "P11_UI_project_table_OTS_sliders.png",
+      "status": "EX",
+      "safeArea": "laptop screen, centre"
+    },
+    {
+      "assetId": "CHM-PLT-EX-012",
+      "key": "P12_UAT",
+      "file": "P12_UI_QA_table_workflow_cards.png",
+      "status": "EX",
+      "safeArea": "five blank cards on round table"
+    },
+    {
+      "assetId": "CHM-PLT-EX-013",
+      "key": "P13_CORRIDOR",
+      "file": "P13_Corridor_early_evening.png",
+      "status": "EX"
+    },
+    {
+      "assetId": "CHM-PLT-NEW-015",
+      "key": "P15_EMPTY_DAY",
+      "file": "P15_ChimeraRoom_empty_daylight.png",
+      "status": "NEW",
+      "model": "nano_banana_pro/2k",
+      "mandatory": true,
+      "replaces": "P14_ChimeraRoom_empty_late_night.png",
+      "usedBy": [
+        "P16",
+        "P17",
+        "P20"
+      ]
+    },
+    {
+      "assetId": "CHM-PLT-NEW-016",
+      "key": "P16_APEX_EXT",
+      "file": "P16_Apex_University_exterior_daylight.png",
+      "status": "NEW",
+      "model": "nano_banana_pro/2k",
+      "usedBy": [
+        "P10",
+        "P20"
+      ],
+      "note": "Second attempt. First returned South Asian architecture and non-Nigerian students."
+    },
+    {
+      "assetId": "CHM-PLT-NEW-017",
+      "key": "P17_STUDENT_ROOM",
+      "file": "P17_Student_room_phone_daylight.png",
+      "status": "NEW",
+      "model": "nano_banana_pro/2k",
+      "role": "start frame + fallback plate for V10",
+      "usedBy": [
+        "P10"
+      ]
+    },
+    {
+      "assetId": "CHM-PLT-NEW-018",
+      "key": "P18_EXEC_DAY",
+      "file": "P18_Executive_room_daylight.png",
+      "status": "NEW",
+      "model": "nano_banana_pro/2k",
+      "usedBy": [
+        "P18"
+      ],
+      "reason": "Page 18 requires daylight; P08 is an evening plate."
+    }
+  ],
+  "segmentFrames": {
+    "note": "Reduced-motion and load-failure fallbacks. Segment convention A 0-3s, B 3-5s, C 5-8s, D 8-10s.",
+    "path": "plates/segments/",
+    "warning": "The A/B/C/D emotional convention in bible section 4 does NOT match the delivered footage. See ASSET_QA.md section 2.1 before wiring the media engine.",
+    "files": [
+      "V01_segA_end.png",
+      "V01_segB_end.png",
+      "V01_segC_end.png",
+      "V01_segD_end.png",
+      "V02_segA_end.png",
+      "V02_segB_end.png",
+      "V02_segC_end.png",
+      "V02_segD_end.png",
+      "V03_segA_end.png",
+      "V03_segB_end.png",
+      "V03_segC_end.png",
+      "V03_segD_end.png",
+      "V09_end.png",
+      "V10_end.png",
+      "V11_end.png",
+      "V12_end.png",
+      "V13_end.png"
+    ]
+  },
+  "pageReferences": {
+    "path": "public/references/project-chimera/",
+    "files": "P01.png through P20.png, one per route, per master prompt section 16",
+    "sourceMapping": "'ChatGPT Image Jul 31 2026 04_23_33 PM (N)' -> page N; '04_23_41 PM (N)' -> page N+10",
+    "warning": "Six mockups conflict with the master prompt. Master wins. See ASSET_QA.md section 4."
+  },
+  "rejected": [
+    {
+      "file": "P14_ChimeraRoom_empty_late_night.png",
+      "reason": "Night imagery, forbidden by master prompt 1.6. Kept in /_source only, never shipped."
+    }
+  ],
+  "outstanding": {
+    "audio": "No VO, ambience, SFX or captions produced yet. 22 ElevenLabs lines across 4 speakers, 5 ambience beds, 9 SFX, 20 VTT caption files still required.",
+    "referenceImages": "20 page mockups exist in 'pages reference/' but are unnamed; map is 04_23_33 PM (N) -> page N, 04_23_41 PM (N) -> page N+10."
+  },
+  "idScheme": {
+    "schema": "CHM-[TYPE]-[STATUS]-[NUMBER]",
+    "deviations": [
+      "P01-P08 carry both assetId (DRV, accurate) and documentAssetId (EX, as printed in bible §4).",
+      "VO and transcript IDs follow the bible's actual usage CHM-VO-<PAGE>-<SPEAKER>-<NUM>, which does not match the §9 schema. That inconsistency is in the source document, not introduced here.",
+      "V13, P09, P17, P18 are new assets with no ID in either document; they are numbered in-sequence and flagged NEW."
+    ]
+  }
+}
