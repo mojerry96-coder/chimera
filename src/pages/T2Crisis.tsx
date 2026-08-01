@@ -4,7 +4,7 @@ import { PageShell } from "@/components/PageShell";
 import { Box } from "@/lib/stage";
 import { PrimaryButton } from "@/components/controls";
 import { MediaSequence, type MediaCue } from "@/media/MediaSequence";
-import { VIDEO, PLATE, SEGMENT, segmentPlate } from "@/media/assets";
+import { VIDEO, PLATE, heldFrame } from "@/media/assets";
 import { VO } from "@/media/voice";
 import { useVoice } from "@/media/useVoice";
 import { useSceneNav } from "@/lib/useSceneNav";
@@ -32,29 +32,62 @@ export default function T2Crisis() {
   const [uiReady, setUiReady] = useState(false);
   const [choice, setChoice] = useState<"A" | "B" | "C" | null>(null);
 
+  /**
+   * Recut coverage. The original four cues gave the emotional centre of the
+   * film a vibrating phone, a pair of disembodied hands and two reaction
+   * shots — no face, no place, and no time to register any of it.
+   *
+   * This is a scene instead: establish where she is, hold on her face long
+   * enough for her to become a person, land on the object, and only then cut
+   * to the professionals discussing her. The order is deliberate — the player
+   * meets her before they meet the problem.
+   */
   const cues = useMemo<MediaCue[]>(
     () => [
-      { src: VIDEO.V07_PHONE, poster: PLATE.P07_PHONE, alt: "A phone vibrates on a desk." },
-      { src: VIDEO.V10_PHONE_AFTERMATH, poster: PLATE.P17_STUDENT_ROOM, alt: "A student lowers her phone to the desk." },
       {
-        src: VIDEO.V01_ADEBAYO,
-        poster: segmentPlate("V01", "B"),
-        start: SEGMENT.B.in,
-        end: SEGMENT.B.out,
-        alt: "Dr Adebayo takes a call."
+        src: VIDEO.V20_STUDENT_WIDE,
+        poster: heldFrame("V20"),
+        alt: "A student alone in her hostel room, late afternoon, lowering her phone."
       },
       {
-        src: VIDEO.V03_FOLAKE,
-        poster: segmentPlate("V03", "C"),
-        start: SEGMENT.C.in,
-        end: SEGMENT.C.out,
-        alt: "Folake, concerned."
+        src: VIDEO.V21_STUDENT_CLOSE,
+        poster: heldFrame("V21"),
+        alt: "Her face, lit by one hard slat of light. She is not crying."
+      },
+      {
+        poster: PLATE.P22_PHONE_INSERT,
+        hold: 2.5,
+        alt: "Her phone lying blank on a scarred wooden desk, her hand resting beside it."
+      },
+      {
+        src: VIDEO.V22_ADEBAYO_VC,
+        poster: heldFrame("V22"),
+        alt: "Dr Adebayo at the window, taking the Vice-Chancellor's call."
+      },
+      {
+        src: VIDEO.V23_FOLAKE_CONCERN,
+        poster: heldFrame("V23"),
+        alt: "Folake in the QA room, looking directly at you."
       }
     ],
     []
   );
 
-  useVoice(useMemo(() => [VO.P10_STU_01, VO.P10_ADB_01, VO.P10_FOL_01], []));
+  /**
+   * Cue points against the recut, which runs
+   *   0.0   V20 wide          5.0s
+   *   5.0   V21 close         5.0s
+   *  10.1   phone insert      2.5s   — deliberately silent
+   *  12.6   V22 Adebayo       6.0s
+   *  18.6   V23 Folake        5.0s
+   *
+   * The student's 9.6s line covers her own two shots. The insert plays in
+   * silence so the object lands on its own. Adebayo and Folake then speak on
+   * their own shots rather than over hers.
+   */
+  useVoice(useMemo(() => [VO.P10_STU_01, VO.P10_ADB_01, VO.P10_FOL_01], []), {
+    offsets: [0, 12.8, 18.9]
+  });
 
   const confirm = () => {
     if (!choice) return;

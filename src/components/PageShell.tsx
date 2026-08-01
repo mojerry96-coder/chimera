@@ -2,6 +2,7 @@ import type { ReactNode } from "react";
 import { FixedStage, Box } from "@/lib/stage";
 import { ProjectChimeraBrand } from "./Brand";
 import { MetricToast } from "./MetricToast";
+import { AudioGatePrompt } from "./AudioGatePrompt";
 
 type PageShellProps = {
   media: ReactNode;
@@ -35,6 +36,7 @@ export function PageShell({ media, children, pageNumber, showBrand = true }: Pag
       {children}
 
       <MetricToast />
+      <AudioGatePrompt />
     </FixedStage>
   );
 }

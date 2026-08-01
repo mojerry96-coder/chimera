@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useRef, useState } from "react";
+import { whenAudioUnlocked } from "./audioGate";
 
 export type MediaCue = {
   /** Video source. Omit to hold a still for `hold` seconds. */
@@ -118,9 +119,24 @@ export function MediaSequence({ cues, onComplete, skipAfter = 2, className = "" 
     if (!el || !cue?.src) return;
 
     let raf = 0;
-    const onLoaded = () => {
+    const onLoaded = async () => {
       if (cue.start != null) el.currentTime = cue.start;
-      el.play().catch(() => setDegraded(true));
+      try {
+        await el.play();
+      } catch (e) {
+        const name = (e as DOMException)?.name;
+        // A blocked autoplay is not a broken asset. Degrading here threw away
+        // the entire cinematic sequence and jumped straight to the final
+        // plate, which is exactly what "it happened too fast to follow" looks
+        // like. Wait for the gate instead, then start.
+        if (name === "NotAllowedError") {
+          await whenAudioUnlocked();
+          el.play().catch(() => setDegraded(true));
+          return;
+        }
+        if (name === "AbortError") return;
+        setDegraded(true);
+      }
     };
     const watch = () => {
       if (cue.end != null && el.currentTime >= cue.end) {

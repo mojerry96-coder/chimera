@@ -20,7 +20,17 @@ export const VIDEO = {
   V11_VC_CALL: "/assets/video/V11_Adebayo_VC_call_6s.mp4",
   V12_BOARD_REACTION: "/assets/video/V12_board_absorbs_recommendation_8s.mp4",
   /** Fills the approval beat V01 does not contain. See ASSET_QA.md 2.1. */
-  V13_ADEBAYO_APPROVAL: "/assets/video/V13_Adebayo_approval_5s.mp4"
+  V13_ADEBAYO_APPROVAL: "/assets/video/V13_Adebayo_approval_5s.mp4",
+
+  /* ---- Page 10 recut. See ASSET_QA.md section 8. --------------------------
+     Built on the verified pipeline: Nano Banana Pro + a character Element for
+     the still, then Kling start_image to animate it. Elements alone do not
+     survive into Kling — they carry wardrobe but not the face — so every one
+     of these clips is driven from its own still. */
+  V20_STUDENT_WIDE: "/assets/video/V20_student_room_wide_5s.mp4",
+  V21_STUDENT_CLOSE: "/assets/video/V21_student_close_5s.mp4",
+  V22_ADEBAYO_VC: "/assets/video/V22_adebayo_vc_call_6s.mp4",
+  V23_FOLAKE_CONCERN: "/assets/video/V23_folake_concern_5s.mp4"
 } as const;
 
 export const PLATE = {
@@ -42,8 +52,21 @@ export const PLATE = {
   P16_APEX_EXT: "/assets/plates/P16_Apex_University_exterior_daylight.png",
   P17_STUDENT_ROOM: "/assets/plates/P17_Student_room_phone_daylight.png",
   /** Page 18 requires daylight; P08 is an evening plate. */
-  P18_EXEC_DAY: "/assets/plates/P18_Executive_room_daylight.png"
+  P18_EXEC_DAY: "/assets/plates/P18_Executive_room_daylight.png",
+
+  /* ---- Page 10 recut plates. Each is the still its clip was animated from,
+     so it doubles as that clip's poster and its reduced-motion fallback. */
+  P20_STUDENT_WIDE: "/assets/plates/P20_Student_room_wide.png",
+  P21_STUDENT_CLOSE: "/assets/plates/P21_Student_close.png",
+  P22_PHONE_INSERT: "/assets/plates/P22_Phone_insert_desk.png",
+  P23_ADEBAYO_VC: "/assets/plates/P23_Adebayo_vc_call.png",
+  P24_FOLAKE_CONCERN: "/assets/plates/P24_Folake_concern.png"
 } as const;
+
+/** Held final frame of a page-10 recut clip, for the invisible video→plate switch. */
+export function heldFrame(clip: "V20" | "V21" | "V22" | "V23") {
+  return `/assets/plates/segments/${clip}_end.png`;
+}
 
 /**
  * Master prompt section 7 — character clip segments.

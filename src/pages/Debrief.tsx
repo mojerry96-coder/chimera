@@ -9,6 +9,7 @@ import {
 import { ScrollStage } from "@/lib/ScrollStage";
 import { Box } from "@/lib/stage";
 import { ProjectChimeraBrand } from "@/components/Brand";
+import { AudioGatePrompt } from "@/components/AudioGatePrompt";
 import { PrimaryButton, SecondaryButton, TextAction } from "@/components/controls";
 import { Plate } from "@/media/MediaSequence";
 import { PLATE } from "@/media/assets";
@@ -276,6 +277,8 @@ export default function Debrief() {
 
       {/* Bottom breathing room so the last panel is not flush to the fold. */}
       <Box x={0} y={3040} w={1920} h={80} z={1} />
+
+      <AudioGatePrompt />
     </ScrollStage>
   );
 }
