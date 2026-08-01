@@ -218,3 +218,90 @@ Still open:
    a neutral placeholder.
 4. Remaining audio: 5 ambience beds, 9 SFX, 20 VTT caption files — deferred by request.
 5. Optional: `P19_Five_systems_daylight_office_safe_left.png` if the Page 02 left panel covers a face.
+6. **Video quality — see §8.3.** Every clip is `std` 720p upscaled to 1080p, and lost bitrate in the
+   re-encode. Re-encoding from `_source/` at CRF 16–18 is free; switching to `pro` costs +17%.
+7. **Playback stalls between cues — see §8.5.** Open bug, affects every page.
+
+---
+
+## 8. Page 10 recut, and the video quality problem
+
+### 8.1 The verified generation pipeline
+
+Three approaches were tested against one another. Only one holds identity:
+
+| Approach | Result |
+|---|---|
+| Nano Banana Pro + character Element → still | **Identity holds.** Wide, over-the-shoulder and close-up of Adebayo all read as the same woman. |
+| Element passed to Kling 3.0 video | **Fails.** Two tests returned a bearded man and a white woman. The Element carried wardrobe — burgundy blazer, cream blouse — but not the face. `kling_element_ids` was populated on both jobs, so it was applied and simply did not govern identity. |
+| Still → Kling `start_image` | **Identity holds** through motion, including a head turn. |
+
+So every clip must be driven from its own still. The working order is
+**Nano Banana Pro + Element → still → Kling `start_image` → clip**, and the cut
+is assembled by the media engine rather than by the model.
+
+Kling's `multi_shots` / `multi_prompt` parameters are **not reachable** through
+this MCP. They are accepted and echoed on submit, then stripped — the stored
+job shows `multi_shots: false, multi_prompt: []`. Kling will still cut within a
+single clip if the prompt describes shots in prose, but that path forfeits
+identity control and is not worth taking.
+
+### 8.2 Canonical Elements
+
+| Name | id | Built from |
+|---|---|---|
+| `adebayo-cto` | `93ac470c-2b87-4e10-b1f2-7e426a8d3ee7` | P01 Adebayo plate |
+| `apex-student` | `ad97a750-934f-4cdf-b7c7-bb3389454e5f` | Nano Banana hostel-room still |
+| `folake-qa` | `986513bf-b547-4605-b2cc-b9a2164b2c31` | P03 Folake QA plate |
+
+Each was built from a single reference image. Elements accept several, so
+feeding 4–5 frames per character should tighten identity further.
+
+### 8.3 Every clip is std 720p, upscaled — and lost bitrate doing it
+
+**All nine generated clips used `mode: "std"`, which outputs 1280×720.** Never
+`pro`, never `4k`. They were then lanczos-upscaled to the 1920×1080 stage.
+
+The upscale added no detail, and the CRF-20 re-encode discarded real data:
+
+| Clip | As generated | As delivered |
+|---|---:|---:|
+| V09 Abuja | 1284×716 @ 10,311 kb/s | 1920×1080 @ 4,641 kb/s |
+| V21 student close | 1284×716 @ 4,334 kb/s | 1920×1080 @ 2,381 kb/s |
+| V22 Adebayo VC call | 1284×716 @ 4,319 kb/s | 1920×1080 @ 2,267 kb/s |
+
+Bitrate fell in **every** file. What ships is effectively fake 1080p at around
+half the source data rate, and it will read softer than the raw Kling output.
+
+`std` was chosen because the original instruction said "Kling 3.0 at 720p". That
+was taken literally and never revisited once the look moved cinematic, which is
+exactly where softness costs most.
+
+Cost of the alternatives, preflighted on a 5s clip:
+
+| Mode | Credits | vs std |
+|---|---:|---|
+| `std` | 7.50 | — |
+| `pro` | **8.75** | +17% |
+| `4k` | 30.00 | 4× |
+
+`pro` is 1.25 credits more per 5s clip. Native 1080p for all nine existing clips
+would have cost about 11 extra credits in total.
+
+**Recommended:** re-encode from `_source/` at CRF 16–18 to stop the compression
+loss (free, originals retained), and use `pro` for everything from here.
+Regenerating the nine existing clips natively is roughly 90 credits.
+
+### 8.4 Page 10 coverage
+
+Wide on the hostel room → close on her face → silent insert of the phone →
+Adebayo on the VC call → Folake. The player meets her before they meet the
+problem. Voiceover uses `useVoice` offsets so the student speaks over her own
+two shots, the insert plays silent, and Adebayo and Folake speak on their own.
+
+### 8.5 Open bug — playback stalls between cues
+
+After the audio gate opens, `MediaSequence` advances through cuts but stalls
+mid-clip: the video element reports `paused: true` at ~0.9s with
+`readyState: 4`. Cuts happen; playback does not run through. Found, not
+diagnosed. Affects every page, not just page 10.
